@@ -18,8 +18,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-orbitron font-bold mb-6 text-glow-cyan">
-              Creative Developer
+            <h1 className="text-6xl md:text-8xl font-orbitron font-bold mb-6">
+              Nivedhana S
             </h1>
           </motion.div>
 
@@ -29,7 +29,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 font-rajdhani"
           >
-            Crafting immersive digital experiences with cutting-edge technology
+            Aspiring Software Developer | React.js | Flutter | MERN Stack
           </motion.p>
 
           <motion.div
@@ -38,35 +38,35 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-orbitron font-semibold mb-6 text-secondary">
+            <h2 className="text-3xl md:text-4xl font-orbitron font-semibold mb-6">
               About Me
             </h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-              I'm a passionate developer specializing in web development, 3D graphics, and interactive experiences. 
-              With expertise in React, Three.js, and modern web technologies, I bring ideas to life with stunning 
-              visuals and seamless user experiences.
+              Aspiring Software Developer with strong problem-solving skills and hands-on experience in building scalable,
+              responsive web applications. Eager to contribute to high-quality software solutions while continuously learning
+              and improving performance and user experience.
             </p>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="p-6 bg-card rounded-xl border border-primary/20 glow-cyan"
+                className="p-6 bg-card rounded-xl border border-border"
               >
-                <h3 className="text-4xl font-orbitron font-bold text-primary mb-2">50+</h3>
+                <h3 className="text-4xl font-orbitron font-bold text-primary mb-2">8.0</h3>
+                <p className="text-muted-foreground">CGPA</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="p-6 bg-card rounded-xl border border-border"
+              >
+                <h3 className="text-4xl font-orbitron font-bold text-primary mb-2">3+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="p-6 bg-card rounded-xl border border-secondary/20 glow-purple"
+                className="p-6 bg-card rounded-xl border border-border"
               >
-                <h3 className="text-4xl font-orbitron font-bold text-secondary mb-2">5+</h3>
-                <p className="text-muted-foreground">Years Experience</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="p-6 bg-card rounded-xl border border-accent/20"
-              >
-                <h3 className="text-4xl font-orbitron font-bold text-accent mb-2">100%</h3>
-                <p className="text-muted-foreground">Client Satisfaction</p>
+                <h3 className="text-4xl font-orbitron font-bold text-primary mb-2">136</h3>
+                <p className="text-muted-foreground">BEC Score</p>
               </motion.div>
             </div>
           </motion.div>
@@ -78,12 +78,12 @@ const Hero = () => {
             className="flex gap-4 justify-center"
           >
             <Link to="/projects">
-              <Button size="lg" className="font-orbitron font-semibold glow-cyan">
+              <Button size="lg" className="font-orbitron font-semibold">
                 View Projects
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="font-orbitron font-semibold border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button size="lg" variant="outline" className="font-orbitron font-semibold">
                 Get In Touch
               </Button>
             </Link>

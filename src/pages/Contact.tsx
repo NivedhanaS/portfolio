@@ -28,11 +28,11 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6 text-glow-cyan">
+          <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6">
             Get In Touch
           </h1>
           <p className="text-xl text-muted-foreground font-rajdhani">
-            Let's discuss your next project
+            Let's connect and discuss opportunities
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
 
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Button type="submit" className="w-full font-orbitron font-bold glow-cyan">
+                  <Button type="submit" className="w-full font-orbitron font-bold">
                     Send Message
                   </Button>
                 </motion.div>
@@ -119,7 +119,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-rajdhani text-muted-foreground">Email</p>
-                    <p className="font-orbitron font-semibold">contact@portfolio.dev</p>
+                    <p className="font-orbitron font-semibold">nivedhanasakthivel@gmail.com</p>
                   </div>
                 </motion.div>
 
@@ -132,7 +132,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-rajdhani text-muted-foreground">Phone</p>
-                    <p className="font-orbitron font-semibold">+1 (555) 123-4567</p>
+                    <p className="font-orbitron font-semibold">+91 8680814368</p>
                   </div>
                 </motion.div>
 
@@ -145,7 +145,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-rajdhani text-muted-foreground">Location</p>
-                    <p className="font-orbitron font-semibold">San Francisco, CA</p>
+                    <p className="font-orbitron font-semibold">Coimbatore, India</p>
                   </div>
                 </motion.div>
               </div>

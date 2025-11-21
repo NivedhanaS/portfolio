@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -30,13 +31,13 @@ export const Navigation = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-2xl font-orbitron font-bold text-glow-cyan"
+              className="text-2xl font-orbitron font-bold"
             >
-              Portfolio
+              Nivedhana S
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-1">
+            <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
                 <Link key={item.path} to={item.path}>
                   <motion.div
@@ -44,7 +45,7 @@ export const Navigation = () => {
                     whileTap={{ scale: 0.95 }}
                     className={`px-4 py-2 rounded-lg font-rajdhani font-medium transition-all ${
                       location.pathname === item.path
-                        ? "bg-primary text-primary-foreground glow-cyan"
+                        ? "bg-primary text-primary-foreground"
                         : "text-foreground hover:bg-muted"
                     }`}
                   >
@@ -52,15 +53,19 @@ export const Navigation = () => {
                   </motion.div>
                 </Link>
               ))}
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-foreground"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            <div className="md:hidden flex items-center gap-2">
+              <ThemeToggle />
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-foreground"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -84,7 +89,7 @@ export const Navigation = () => {
                   whileHover={{ scale: 1.05, x: 10 }}
                   className={`px-6 py-4 rounded-lg font-rajdhani font-medium text-xl transition-all ${
                     location.pathname === item.path
-                      ? "bg-primary text-primary-foreground glow-cyan"
+                      ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-muted"
                   }`}
                 >
