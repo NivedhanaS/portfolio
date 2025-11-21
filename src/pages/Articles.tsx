@@ -62,11 +62,11 @@ const Articles = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6 text-glow-cyan">
+          <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6">
             Featured Articles
           </h1>
           <p className="text-xl text-muted-foreground font-rajdhani">
-            Thoughts, tutorials, and insights on web development
+            Technical articles and learning resources (Coming Soon)
           </p>
         </motion.div>
 

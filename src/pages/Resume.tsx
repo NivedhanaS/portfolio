@@ -11,7 +11,7 @@ const Resume = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6 text-glow-cyan">
+          <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6">
             Resume
           </h1>
           <p className="text-xl text-muted-foreground font-rajdhani">
@@ -49,19 +49,19 @@ const Resume = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div className="p-4 bg-background/50 rounded-lg">
                   <h3 className="font-orbitron font-semibold text-primary mb-2">Experience</h3>
-                  <p className="text-sm text-muted-foreground">5+ years in web development</p>
+                  <p className="text-sm text-muted-foreground">B.E CSE @ SRIT (2020-2024)</p>
                 </div>
                 <div className="p-4 bg-background/50 rounded-lg">
-                  <h3 className="font-orbitron font-semibold text-primary mb-2">Projects</h3>
-                  <p className="text-sm text-muted-foreground">50+ completed projects</p>
+                  <h3 className="font-orbitron font-semibold text-primary mb-2">CGPA</h3>
+                  <p className="text-sm text-muted-foreground">8.0/10.0</p>
                 </div>
                 <div className="p-4 bg-background/50 rounded-lg">
                   <h3 className="font-orbitron font-semibold text-primary mb-2">Skills</h3>
-                  <p className="text-sm text-muted-foreground">React, Three.js, Node.js</p>
+                  <p className="text-sm text-muted-foreground">React, Flutter, MERN Stack</p>
                 </div>
                 <div className="p-4 bg-background/50 rounded-lg">
-                  <h3 className="font-orbitron font-semibold text-primary mb-2">Education</h3>
-                  <p className="text-sm text-muted-foreground">Computer Science Degree</p>
+                  <h3 className="font-orbitron font-semibold text-primary mb-2">Projects</h3>
+                  <p className="text-sm text-muted-foreground">3+ Full-Stack Applications</p>
                 </div>
               </div>
             </div>
@@ -72,7 +72,8 @@ const Resume = () => {
             >
               <Button 
                 size="lg" 
-                className="w-full font-orbitron font-bold text-lg glow-cyan group-hover:glow-purple transition-all duration-300"
+                className="w-full font-orbitron font-bold transition-all duration-300"
+                onClick={() => window.open('/Nivedhana_S_Resume.pdf', '_blank')}
               >
                 <Download className="mr-2" size={20} />
                 Download Resume PDF

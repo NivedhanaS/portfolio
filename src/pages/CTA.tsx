@@ -24,13 +24,13 @@ const CTA = () => {
               <Sparkles className="text-primary" size={64} />
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6 text-glow-cyan">
+            <h1 className="text-5xl md:text-7xl font-orbitron font-bold mb-6">
               Let's Create Something Amazing
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-rajdhani max-w-2xl mx-auto">
-              Ready to bring your vision to life? Let's collaborate and build 
-              extraordinary digital experiences together.
+              Ready to collaborate on your next project? Let's build 
+              innovative software solutions together.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -41,9 +41,9 @@ const CTA = () => {
                 >
                   <Button 
                     size="lg" 
-                    className="font-orbitron font-bold text-lg px-12 py-6 glow-cyan hover:glow-purple transition-all duration-300"
+                    className="font-orbitron font-bold text-lg px-12 py-6 transition-all duration-300"
                   >
-                    Hire Me
+                    Contact Me
                   </Button>
                 </motion.div>
               </Link>
@@ -56,7 +56,7 @@ const CTA = () => {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="font-orbitron font-bold text-lg px-12 py-6 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground glow-purple"
+                    className="font-orbitron font-bold text-lg px-12 py-6"
                   >
                     View Portfolio
                   </Button>
@@ -70,7 +70,7 @@ const CTA = () => {
               transition={{ delay: 0.6 }}
               className="mt-12 text-muted-foreground font-rajdhani"
             >
-              <p className="text-lg">Available for freelance projects and collaborations</p>
+              <p className="text-lg">Open to opportunities and collaborations</p>
             </motion.div>
           </div>
         </motion.div>

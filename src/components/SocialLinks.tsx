@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram, Youtube, Twitter } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub", color: "#00D9FF" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "#0077B5" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram", color: "#E4405F" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube", color: "#FF0000" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter", color: "#1DA1F2" },
+  { icon: Github, href: "https://github.com/nivedhanasakthivel", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/nivedhana-s", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 export const SocialLinks = () => {
@@ -23,8 +23,7 @@ export const SocialLinks = () => {
           transition={{ delay: index * 0.1 }}
           whileHover={{ scale: 1.2, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
-          className="p-4 bg-card rounded-xl border border-border hover:border-primary transition-all glow-cyan"
-          style={{ "--glow-color": social.color } as any}
+          className="p-4 bg-card rounded-xl border border-border hover:border-primary transition-all"
         >
           <social.icon size={32} className="text-primary" />
         </motion.a>
