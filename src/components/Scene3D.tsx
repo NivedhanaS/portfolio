@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const AnimatedSphere = () => {
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <Sphere args={[1, 100, 200]} scale={2.5}>
+      <Sphere args={[1, 100, 200]} scale={4.5}>
         <MeshDistortMaterial
-          color="#00D9FF"
+          color="#8b5cf6"
           attach="material"
           distort={0.5}
           speed={2}
