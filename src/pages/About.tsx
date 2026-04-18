@@ -138,7 +138,7 @@ const About = () => {
               <Button
                 size="lg"
                 className="font-orbitron font-semibold w-full sm:w-auto"
-                onClick={() => window.open("/Nivedhana_S Portfolio.pdf", "_blank")}
+                onClick={() => window.open("/Nivedhana_S_Portfolio.pdf", "_blank")}
               >
                 <ExternalLink size={18} className="mr-2" />
                 View Online
@@ -151,7 +151,7 @@ const About = () => {
                 className="font-orbitron font-semibold w-full sm:w-auto"
                 asChild
               >
-                <a href="/Nivedhana_S Portfolio.pdf" download="Nivedhana_S Portfolio.pdf">
+                <a href="/Nivedhana_S_Portfolio.pdf" download="Nivedhana_S_Portfolio.pdf">
                   <Download size={18} className="mr-2" />
                   Download Resume
                 </a>
