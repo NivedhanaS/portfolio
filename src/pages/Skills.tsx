@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { Code, Database, Smartphone, Wrench } from "lucide-react";
 
 const skillCategories = [
@@ -32,6 +33,50 @@ const skillCategories = [
 const duplicatedCategories = [...skillCategories, ...skillCategories];
 
 const Skills = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const interactionTimeoutRef = useRef<number | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const pauseInteraction = () => {
+    setIsPaused(true);
+    if (interactionTimeoutRef.current) {
+      window.clearTimeout(interactionTimeoutRef.current);
+    }
+    interactionTimeoutRef.current = window.setTimeout(() => {
+      setIsPaused(false);
+    }, 1500);
+  };
+
+  useEffect(() => {
+    let rafId = 0 as number;
+    let lastTime: number | null = null;
+
+    const step = (time: number) => {
+      const container = containerRef.current;
+      if (!container) {
+        rafId = requestAnimationFrame(step);
+        return;
+      }
+
+      if (lastTime === null) lastTime = time;
+      const delta = time - lastTime;
+      lastTime = time;
+
+      if (!isPaused) {
+        const speed = 40; // pixels per second
+        container.scrollLeft += (speed * delta) / 1000;
+        const half = container.scrollWidth / 2;
+        if (half > 0 && container.scrollLeft >= half) {
+          container.scrollLeft -= half;
+        }
+      }
+
+      rafId = requestAnimationFrame(step);
+    };
+
+    rafId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(rafId);
+  }, [isPaused]);
   return (
     <div className="min-h-screen py-20 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
@@ -41,7 +86,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold mb-4 md:mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-semibold mb-4 md:mb-6">
             Skills & Expertise
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-rajdhani">
@@ -49,21 +94,21 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Horizontal Slider */}
-        <div className="relative overflow-hidden">
-          <motion.div
-            className="flex gap-6 md:gap-8"
-            animate={{
-              x: ["0%", "-50%"],
-            }}
-            transition={{
-              x: {
-                duration: 60,
-                repeat: Infinity,
-                ease: "linear",
-              },
-            }}
-          >
+        {/* Horizontal Slider (auto-scroll + manual scroll support) */}
+        <div
+          ref={(el) => (containerRef.current = el)}
+          className="relative overflow-x-auto no-scrollbar"
+          onWheel={(e) => {
+            // convert vertical wheel to horizontal scroll when hovering the slider
+            if (!containerRef.current) return;
+            e.preventDefault();
+            containerRef.current.scrollLeft += e.deltaY;
+            pauseInteraction();
+          }}
+          onTouchStart={() => pauseInteraction()}
+          onPointerDown={() => pauseInteraction()}
+        >
+          <div className="flex gap-6 md:gap-8">
             {duplicatedCategories.map((category, index) => (
               <div
                 key={`${category.category}-${index}`}
@@ -74,7 +119,7 @@ const Skills = () => {
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${category.gradient}`}>
                       <category.icon className="text-white" size={24} />
                     </div>
-                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-foreground">
+                    <h3 className="text-lg md:text-xl font-orbitron font-semibold text-foreground">
                       {category.category}
                     </h3>
                   </div>
@@ -92,7 +137,7 @@ const Skills = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

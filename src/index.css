@@ -78,16 +78,40 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Rajdhani', sans-serif;
+    /* Slightly smaller base text and medium weight for a lighter overall look */
+    font-size: 15px;
+    font-weight: 500;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    /* Use Rajdhani for headings globally */
+    font-family: 'Rajdhani', sans-serif;
+    /* Use medium weight for headings to avoid overly thick styles */
+    font-weight: 500;
+  }
+
+  /* Tone down utility weights so "bold" and "semibold" feel lighter globally */
+  .font-bold {
+    font-weight: 600 !important;
+  }
+
+  .font-semibold {
+    font-weight: 500 !important;
   }
 }
 
 @layer utilities {
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
   
   @keyframes float {

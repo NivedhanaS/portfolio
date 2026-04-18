@@ -53,7 +53,7 @@ export const Navigation = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-xl md:text-2xl font-orbitron font-bold cursor-pointer"
+              className="text-xl md:text-2xl font-orbitron font-semibold cursor-pointer"
               onClick={() => scrollToSection("home")}
             >
               Nivedhana S

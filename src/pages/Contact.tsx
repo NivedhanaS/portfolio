@@ -40,7 +40,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold mb-4 md:mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-semibold mb-4 md:mb-6">
             Get In Touch
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-rajdhani">
@@ -56,7 +56,7 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
           >
             <div className="bg-card border border-border rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-              <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-6 md:mb-8 text-foreground">
+              <h3 className="text-2xl md:text-3xl font-orbitron font-semibold mb-6 md:mb-8 text-foreground">
                 Send a Message
               </h3>
 
@@ -123,7 +123,7 @@ const Contact = () => {
             className="space-y-6 md:space-y-8"
           >
             <div className="bg-card border border-border rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-              <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-6 md:mb-8 text-foreground">
+              <h3 className="text-2xl md:text-3xl font-orbitron font-semibold mb-6 md:mb-8 text-foreground">
                 Contact Info
               </h3>
 
@@ -152,7 +152,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-rajdhani text-muted-foreground text-sm">Phone</p>
-                    <p className="font-rajdhani font-semibold text-foreground">+91 8680814368</p>
+                    <p className="font-rajdhani font-semibold text-foreground">+91 7806961394</p>
                   </div>
                 </motion.div>
 
@@ -172,7 +172,7 @@ const Contact = () => {
             </div>
 
             <div className="bg-card border border-border rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-              <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-6 md:mb-8 text-foreground text-center">
+              <h3 className="text-2xl md:text-3xl font-orbitron font-semibold mb-6 md:mb-8 text-foreground text-center">
                 Connect With Me
               </h3>
               <div className="flex justify-center gap-4">

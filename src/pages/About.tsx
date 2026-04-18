@@ -12,7 +12,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold mb-4 md:mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-semibold mb-4 md:mb-6">
             About Me
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-rajdhani max-w-2xl mx-auto">
@@ -34,7 +34,7 @@ const About = () => {
               <div className="p-3 bg-primary/10 rounded-xl">
                 <GraduationCap className="text-primary" size={24} />
               </div>
-              <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground">
+              <h3 className="text-xl md:text-2xl font-orbitron font-semibold text-foreground">
                 Education
               </h3>
             </div>
@@ -66,7 +66,7 @@ const About = () => {
               <div className="p-3 bg-secondary/50 rounded-xl">
                 <Briefcase className="text-foreground" size={24} />
               </div>
-              <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground">
+              <h3 className="text-xl md:text-2xl font-orbitron font-semibold text-foreground">
                 Experience
               </h3>
             </div>
@@ -95,7 +95,7 @@ const About = () => {
               <div className="p-3 bg-accent/50 rounded-xl">
                 <Award className="text-foreground" size={24} />
               </div>
-              <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground">
+              <h3 className="text-xl md:text-2xl font-orbitron font-semibold text-foreground">
                 Certificates
               </h3>
             </div>
@@ -126,7 +126,7 @@ const About = () => {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <FileText className="text-primary" size={32} />
-            <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-foreground">
+            <h3 className="text-2xl md:text-3xl font-orbitron font-semibold text-foreground">
               Resume
             </h3>
           </div>
@@ -138,7 +138,7 @@ const About = () => {
               <Button
                 size="lg"
                 className="font-orbitron font-semibold w-full sm:w-auto"
-                onClick={() => window.open("/Nivedhana_S_Resume.pdf", "_blank")}
+                onClick={() => window.open("/Nivedhana_S_MERN.pdf", "_blank")}
               >
                 <ExternalLink size={18} className="mr-2" />
                 View Online
@@ -151,7 +151,7 @@ const About = () => {
                 className="font-orbitron font-semibold w-full sm:w-auto"
                 asChild
               >
-                <a href="/Nivedhana_S_Resume.pdf" download="Nivedhana_S_Resume.pdf">
+                <a href="/Nivedhana_S_MERN.pdf" download="Nivedhana_S_MERN.pdf">
                   <Download size={18} className="mr-2" />
                   Download Resume
                 </a>

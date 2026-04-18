@@ -54,7 +54,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
+        orbitron: ['Rajdhani', 'sans-serif'],
         rajdhani: ['Rajdhani', 'sans-serif'],
       },
       keyframes: {

@@ -63,8 +63,8 @@ export const ParticlesBackground = () => {
             color: "#8b5cf6",
             distance: 180,
             enable: true,
-            opacity: 0.7,
-            width: 2,
+            opacity: 0.45,
+            width: 1,
           },
           move: {
             direction: "none",
@@ -85,13 +85,13 @@ export const ParticlesBackground = () => {
             value: 120,
           },
           opacity: {
-            value: 0.9,
+            value: 0.65,
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 2, max: 5 },
+            value: { min: 1.5, max: 3 },
           },
         },
         detectRetina: true,
