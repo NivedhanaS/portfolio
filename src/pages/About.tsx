@@ -117,7 +117,7 @@ const About = () => {
         </div>
 
         {/* Resume Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -158,7 +158,7 @@ const About = () => {
               </Button>
             </motion.div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
